@@ -1,0 +1,19 @@
+/* Make the #destinations_container content to display horizontally and wrap */
+.submit_btn {
+  width: 100%;
+}
+#dest_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#dest_title {
+  text-align: center;
+}
+
+.buttons_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
