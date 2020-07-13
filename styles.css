@@ -2,6 +2,11 @@
 .submit_btn {
   width: 100%;
 }
+
+#header {
+  color: aliceblue;
+}
+
 #dest_container {
   display: flex;
   flex-wrap: wrap;

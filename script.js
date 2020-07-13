@@ -119,24 +119,16 @@ function createDestCard(name, location, photoUrl, description) {
 function createHeaderBG(photoUrl) {
   // Create the destination photo element and append it to the card
   //   var headerBG = document.createElement("img");
+  var header = document.getElementById("header");
+  header.style.backgroundImage = `url('${photoUrl}')`;
+  header.style.backgroundRepeat = "no-repeat";
+  header.style.backgroundSize = "cover";
 
-  var headerBG = document.createElement("img");
-  headerBG.setAttribute("class", "headerBG");
-  //   card.setAttribute("class", "card");
-  //   card.style.width = "100%";
-  //   card.style.height = "fit-content";
-  //   card.style.margin = "20px;";
-
-  // Check to make sure that the photo url was entered since it's optional
-  // if the user didn't enter a photo url, show a default photo
-  var defaultHeaderBg =
-    "https://cavchronicle.org/wp-content/uploads/2018/03/top-travel-destination-for-visas-900x504.jpg";
   if (photoUrl.length === 0) {
-    headerBG.setAttribute("src", defaultHeaderBg);
+    header.style.backgroundImage = `url('${defaultPhotoUrl}')`;
   } else {
-    headerBG.setAttribute("src", photoUrl);
+    img.setAttribute("src", photoUrl);
   }
-  document.getElementById("header").appendChild(headerBG);
 }
 
 // EDIT DESTINATION CARD
